@@ -112,9 +112,19 @@ button {
   border: 0;
   background: transparent;
   color: white;
-  font-size: 20px;
   border-radius: 4px;
   padding: 8px 10px;
+}
+.menu-toggle-icon {
+  display: grid;
+  gap: 5px;
+  width: 24px;
+}
+.menu-toggle-icon span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
 }
 .menu-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
