@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews | PRIM'ERA Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/reviews.css" />
+    </head>
+    <body>
+    <header class="site-header">
+      <a class="logo" href="../index.html">
+        <img src="../assets/logo.png" alt="PRIM'ERA Café logo" />
+        <span>PRIM'ERA Café</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reviews.html" aria-current="page">Reviews</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">menu</button>
+    </header>
+    <nav class="drawer" id="drawer" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reviews.html" aria-current="page">Reviews</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <main>
+      <section class="page active" id="reviews">
+        <div class="reviews-page">
+          <div class="reviews-hero">
+            <div class="reviews-heading">
+              <p class="eyebrow">COMMUNITY FEEDBACK</p>
+              <h2>Good coffee.<br><em>Good company.</em></h2>
+              <p>Little notes from the people who make our neighborhood feel like home.</p>
+              <div class="reviews-proof">
+                <span class="proof-stars" aria-hidden="true">★★★★★</span>
+                <span>Kind words, shared one visit at a time</span>
+              </div>
+              <button class="primary-btn add-comment-btn" id="addCommentButton" type="button">
+                ADD A COMMENT <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+          <section class="community-reviews" aria-labelledby="communityReviewsTitle">
+            <div class="community-heading">
+              <div>
+                <p class="eyebrow">KIND WORDS</p>
+                <h3 id="communityReviewsTitle">From our community</h3>
+              </div>
+              <span id="reviewCount">0 reviews</span>
+            </div>
+            <div class="review-grid" id="reviewList"></div>
+          </section>
+        </div>
+
+        <dialog class="login-dialog" id="loginDialog" aria-labelledby="loginDialogTitle">
+          <div class="login-card">
+            <button class="login-dialog-close" id="closeLoginDialog" type="button" aria-label="Close sign-in dialog">×</button>
+            <span class="login-card-icon" aria-hidden="true">✳</span>
+            <p class="eyebrow">PULL UP A CHAIR</p>
+            <h3 id="loginDialogTitle">Sign in to add a comment.</h3>
+            <p class="login-intro" id="loginDialogIntro">Log in to leave a note for our little café community.</p>
+
+            <form id="loginForm">
+              <label>
+                Username or Email
+                <input type="text" name="username" placeholder="Your username or email" required />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="Your password" required />
+              </label>
+              <button class="primary-btn" type="submit">CONTINUE TO YOUR REVIEW <span aria-hidden="true">→</span></button>
+            </form>
+
+            <form id="signupForm" hidden>
+              <label>
+                Your Name
+                <input type="text" name="name" placeholder="How should we call you?" maxlength="40" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+              </label>
+              <label>
+                Create a Password
+                <input type="password" name="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required />
+              </label>
+              <label>
+                Confirm Password
+                <input type="password" name="confirmPassword" placeholder="Enter your password again" minlength="8" autocomplete="new-password" required />
+              </label>
+              <p class="demo-account-note">Demo only: account details and passwords are not saved.</p>
+              <button class="primary-btn" type="submit">CREATE DEMO ACCOUNT <span aria-hidden="true">→</span></button>
+            </form>
+
+            <p class="signup-note" id="loginSignupNote">
+              New around here?
+              <button type="button" id="signupButton">Create an account</button>
+            </p>
+            <p class="signup-note" id="signupLoginNote" hidden>
+              Already have an account?
+              <button type="button" id="backToLoginButton">Sign in</button>
+            </p>
+          </div>
+        </dialog>
+      </section>
+
+      <section class="page" id="feedback">
+        <div class="feedback-page">
+          <div class="feedback-form">
+            <p class="eyebrow">YOUR STORY, TOO</p>
+            <h2>Leave a Review</h2>
+            <p>Tell us about your favorite sip, treat, or moment.</p>
+
+            <form id="reviewForm">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="reviewName">Your Name</label>
+                  <input type="text" id="reviewName" name="name" placeholder="Your name" maxlength="40" required />
+                </div>
+                <div class="form-field">
+                  <label for="reviewEmail">Email</label>
+                  <input type="email" id="reviewEmail" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-field">
+                  <label for="favoriteCategory">Favorite Category</label>
+                  <select id="favoriteCategory" name="favorite" required>
+                    <option value="">Select one</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="pastries">Pastries</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="visitDate">Visit Date</label>
+                  <input type="date" id="visitDate" name="visitDate" required />
+                </div>
+              </div>
+
+              <fieldset class="rating-field">
+                <legend>Your Rating</legend>
+                <div class="rating" aria-label="Choose a rating from one to five stars">
+                  <button type="button" data-rating="1" aria-label="1 star">☆</button>
+                  <button type="button" data-rating="2" aria-label="2 stars">☆</button>
+                  <button type="button" data-rating="3" aria-label="3 stars">☆</button>
+                  <button type="button" data-rating="4" aria-label="4 stars">☆</button>
+                  <button type="button" data-rating="5" aria-label="5 stars">☆</button>
+                </div>
+                <input type="hidden" id="rating" name="rating" value="0" />
+              </fieldset>
+
+              <div class="satisfaction-field">
+                <label for="satisfaction">
+                  How satisfied were you?
+                  <span><strong id="satisfactionValue">5</strong> / 10</span>
+                </label>
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" step="1" value="5" />
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="reviewComment">Your Review</label>
+                <textarea id="reviewComment" name="comment" rows="4" maxlength="250" placeholder="Share what made your visit special..." required></textarea>
+                <span class="field-hint">Up to 250 characters</span>
+              </div>
+
+              <label class="checkbox-label">
+                <input type="checkbox" name="recommend" value="yes" />
+                <span>I would recommend PRIM'ERA Café.</span>
+              </label>
+
+              <div class="form-actions">
+                <button class="primary-btn wide" type="submit">POST REVIEW <span aria-hidden="true">→</span></button>
+                <button class="outline-btn wide" type="reset">RESET</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="recent-reviews">
+            <div class="recent-reviews-heading">
+              <div>
+                <p class="eyebrow">COMMUNITY NOTES</p>
+                <h3>Recent Reviews</h3>
+                <p>Fresh thoughts from our café community.</p>
+              </div>
+              <span class="review-count-pill" id="feedbackReviewCount">0 reviews</span>
+            </div>
+            <div class="review-grid" id="feedbackReviewList"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="../js/site.js"></script>
+    <script src="../js/reviews.js"></script>
+    </body>
+  </html>

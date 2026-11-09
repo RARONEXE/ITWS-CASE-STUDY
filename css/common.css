@@ -1,0 +1,222 @@
+/* COMMON SITE-WIDE STYLES */
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --cream: #f3ede3;
+  --paper: #fffaf2;
+  --dark: #292019;
+  --brown: #49352a;
+  --line: #ded2c2;
+  --gold: #a45e3b;
+  --caramel: #d1a15e;
+  --sage: #66745b;
+  --text: #302820;
+  --text-light: #70665b;
+  --shadow: 0 12px 30px rgba(41, 32, 25, 0.12);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.site-header {
+  height: 83px;
+  padding: 0 4%;
+  background: var(--dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.logo-mark {
+  display: none;
+}
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.main-nav a {
+  border: 0;
+  background: transparent;
+  color: white;
+  padding: 10px 18px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--caramel);
+}
+.logo,
+.main-nav a,
+.menu-toggle,
+.primary-btn,
+.facebook-btn,
+.view-btn,
+.tab,
+.home-card,
+.gallery-grid button {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.main-nav a:hover {
+  transform: translateY(-2px);
+}
+.menu-toggle {
+  display: none;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--caramel);
+}
+.drawer {
+  display: none;
+}
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.primary-btn {
+  display: inline-block;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 18px 26px;
+  font-weight: 700;
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+}
+.primary-btn:hover {
+  background: var(--brown);
+  border-color: var(--caramel);
+}
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.drawer a:hover {
+  color: var(--caramel);
+  background: rgba(255, 255, 255, 0.08);
+}
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 20px);
+  background: var(--dark);
+  color: white;
+  padding: 11px 17px;
+  font-size: 11px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  z-index: 100;
+  border-left: 3px solid var(--caramel);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (max-width: 760px) {
+.main-nav {
+    display: none;
+  }
+.menu-toggle {
+    display: block;
+  }
+.drawer.open {
+    display: grid;
+    position: fixed;
+    right: 15px;
+    top: 90px;
+    min-width: 190px;
+    padding: 8px;
+    background: var(--dark);
+    z-index: 60;
+    border: 1px solid rgba(209, 161, 94, 0.3);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+.drawer a {
+    border: 0;
+    background: transparent;
+    color: white;
+    padding: 12px 25px;
+    text-align: left;
+    text-decoration: none;
+  }
+.drawer a[aria-current="page"] {
+    color: var(--caramel);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

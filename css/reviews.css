@@ -1,0 +1,604 @@
+/* REVIEWS PAGE STYLES */
+
+.reviews-page {
+  background: var(--paper);
+  color: var(--dark);
+  padding: 54px 5.6% 76px;
+}
+.reviews-hero {
+  max-width: 1160px;
+  min-height: 350px;
+  margin: 0 auto;
+  padding: 48px clamp(24px, 5vw, 68px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(28, 20, 15, 0.83), rgba(28, 20, 15, 0.48)),
+    url("../assets/reviews.jpg") center / cover;
+  color: white;
+  border-radius: 5px;
+}
+.reviews-heading {
+  max-width: 650px;
+}
+.reviews-heading .eyebrow {
+  color: var(--caramel);
+}
+.reviews-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5.2vw, 64px);
+  line-height: 1.06;
+  font-weight: 500;
+  margin: 18px 0;
+}
+.reviews-heading h2 em {
+  color: var(--caramel);
+  font-weight: 500;
+}
+.reviews-heading > p:not(.eyebrow) {
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.reviews-proof {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+.proof-stars {
+  color: var(--caramel);
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+.add-comment-btn {
+  margin-top: 25px;
+  border-color: var(--caramel);
+  color: white;
+  padding: 14px 20px;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+.add-comment-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.login-dialog {
+  width: calc(100% - 32px);
+  max-width: 420px;
+  max-height: calc(100% - 32px);
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+.login-dialog::backdrop {
+  background: rgba(20, 14, 10, 0.7);
+  backdrop-filter: blur(3px);
+}
+.login-dialog .login-card {
+  position: relative;
+}
+.login-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 27px;
+  line-height: 1;
+}
+.login-dialog-close:hover {
+  color: var(--dark);
+}
+.login-card {
+  width: 100%;
+  background: var(--paper);
+  color: var(--text);
+  margin: 0;
+  padding: 30px;
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.2);
+}
+.login-card-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eee3d2;
+  color: var(--gold);
+  font-size: 21px;
+}
+.login-card .eyebrow {
+  margin: 17px 0 8px;
+  color: var(--gold);
+  font-size: 9px;
+}
+.login-card h3 {
+  text-align: left;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+.login-intro {
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 9px 0 18px;
+}
+.login-card label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+.login-card input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 2px;
+}
+.login-card .primary-btn {
+  width: 100%;
+  border-color: var(--dark);
+  background: var(--dark);
+  color: white;
+  padding: 14px 12px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+.login-card .primary-btn:hover {
+  background: #49362a;
+}
+.demo-account-note {
+  color: var(--text-light);
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 8px 0 14px;
+}
+.signup-note {
+  text-align: center;
+  font-size: 10px;
+  margin: 16px 0 0;
+  color: var(--text-light);
+}
+.signup-note button {
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  font-weight: 700;
+}
+.community-reviews {
+  max-width: 1160px;
+  margin: 56px auto 0;
+}
+.community-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.community-heading .eyebrow {
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+.community-heading h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+#reviewCount,
+#feedbackReviewCount {
+  color: var(--text-light);
+  font-size: 11px;
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.feedback-page {
+  max-width: 1180px;
+  margin: auto;
+  padding: 64px 28px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(28px, 4vw, 52px);
+  align-items: start;
+  background:
+    radial-gradient(ellipse at 2% 2%, rgba(226, 202, 164, 0.18), transparent 34%),
+    var(--cream);
+}
+.feedback-form {
+  position: relative;
+  overflow: hidden;
+  background: #fffdf9;
+  padding: clamp(24px, 3.2vw, 42px);
+  border: 1px solid #eee4d7;
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(48, 35, 27, 0.09);
+}
+.feedback-form::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--gold), var(--caramel), var(--sage));
+}
+.feedback-form > .eyebrow {
+  color: var(--gold);
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 2.4px;
+}
+.feedback-form h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4vw, 42px);
+  font-weight: 500;
+  margin: 9px 0 6px;
+}
+.feedback-form > p:not(.eyebrow) {
+  color: var(--text-light);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 26px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 14px;
+}
+.form-field {
+  min-width: 0;
+}
+.form-field-full {
+  margin-top: 21px;
+}
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.feedback-form .form-field input,
+.feedback-form .form-field select,
+.feedback-form .form-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 12px;
+  border: 1px solid #e5ddd2;
+  background: #fffefa;
+  border-radius: 6px;
+  color: var(--dark);
+  font-size: 13px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.feedback-form .form-field input:hover,
+.feedback-form .form-field select:hover,
+.feedback-form .form-field textarea:hover {
+  border-color: #cbb99f;
+  background: #fff;
+}
+.feedback-form .form-field textarea {
+  resize: vertical;
+  min-height: 112px;
+  line-height: 1.55;
+}
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus,
+.login-card input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(189, 129, 40, 0.14);
+}
+.feedback-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 22px 0 18px;
+}
+.feedback-form legend {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.rating button {
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  font-size: 32px;
+  line-height: 1;
+  padding: 2px 6px 2px 0;
+  transition: transform 0.15s ease, color 0.15s ease, text-shadow 0.15s ease;
+}
+.rating button:hover {
+  color: var(--caramel);
+  transform: translateY(-2px);
+}
+.rating button.selected {
+  color: var(--gold);
+  text-shadow: 0 2px 8px rgba(197, 139, 59, 0.25);
+}
+.rating button:focus-visible,
+.signup-note button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.satisfaction-field {
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  background: linear-gradient(120deg, #f7efe2, #f4ede5);
+  border: 1px solid #eee2d0;
+  border-radius: 7px;
+}
+.satisfaction-field label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.satisfaction-field label span {
+  color: var(--text-light);
+  white-space: nowrap;
+}
+.satisfaction-field label strong {
+  color: var(--dark);
+}
+.satisfaction-field input[type="range"] {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0;
+  accent-color: var(--gold);
+}
+.field-hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-light);
+  font-size: 10px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 17px 0 20px;
+  color: #51463c;
+  font-size: 11px;
+  cursor: pointer;
+}
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--gold);
+}
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+.form-actions .wide {
+  margin: 0;
+}
+.form-actions .primary-btn {
+  flex: 1;
+  border: 0;
+  border-radius: 5px;
+  background: var(--brown);
+  color: white;
+  box-shadow: 0 5px 12px rgba(112, 75, 53, 0.16);
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+.form-actions .primary-btn:hover {
+  background: var(--gold);
+  box-shadow: 0 7px 16px rgba(112, 75, 53, 0.23);
+  transform: translateY(-1px);
+}
+.form-actions .outline-btn {
+  flex: 0 0 100px;
+  border-color: #d8cbb9;
+  border-radius: 5px;
+  color: #6a5949;
+}
+.wide {
+  width: 100%;
+  padding: 13px 15px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+.outline-btn {
+  background: transparent;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+.outline-btn:hover {
+  background: #eee7dd;
+}
+.recent-reviews {
+  position: relative;
+  padding: 32px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(226, 202, 164, 0.28), transparent 40%),
+    #f6f0e7;
+  border: 1px solid #ebe1d5;
+  border-radius: 10px;
+  box-shadow: 0 14px 36px rgba(48, 35, 27, 0.06);
+}
+.recent-reviews-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.recent-reviews .review-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.recent-reviews h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(27px, 3.3vw, 34px);
+  font-weight: 500;
+  margin: 7px 0 6px;
+}
+.recent-reviews-heading > div > p:last-child {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.recent-reviews .eyebrow {
+  color: var(--gold);
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: 2.2px;
+}
+.review-count-pill {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  color: var(--brown);
+  background: #e9ddca;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.review {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 254, 250, 0.94);
+  border: 1px solid #eee6dc;
+  border-radius: 7px;
+  min-width: 0;
+  box-shadow: 0 5px 16px rgba(48, 35, 27, 0.045);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.review:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(48, 35, 27, 0.08);
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.review-avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  background: #eadcc8;
+  color: var(--brown);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+}
+.stars {
+  color: var(--gold);
+  white-space: nowrap;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+}
+.review-name {
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review p {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 16px 0 0;
+  color: #594a3d;
+}
+.review-empty {
+  grid-column: 1 / -1;
+  background: #f0e9df;
+  color: var(--text-light);
+  padding: 22px;
+  font-size: 13px;
+}
+.recent-reviews #feedbackReviewCount {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+@media (max-width: 760px) {
+.feedback-page,
+.reviews-hero {
+    grid-template-columns: 1fr;
+  }
+.reviews-page {
+    padding: 28px 16px 52px;
+  }
+.reviews-hero {
+    padding: 30px 22px;
+    gap: 28px;
+  }
+.reviews-heading h2 {
+    font-size: 45px;
+  }
+.login-card {
+    padding: 24px;
+  }
+.community-reviews {
+    margin-top: 38px;
+  }
+.community-heading h3,
+.recent-reviews h3 {
+    font-size: 27px;
+  }
+.review-grid {
+    grid-template-columns: 1fr;
+  }
+.feedback-page {
+    padding: 35px 16px 54px;
+  }
+}
+@media (min-width: 520px) and (max-width: 760px) {
+.review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+.form-grid {
+    grid-template-columns: 1fr;
+  }
+.recent-reviews {
+    padding: 22px 18px;
+  }
+.recent-reviews-heading {
+    flex-direction: column;
+  }
+.form-actions .outline-btn {
+    flex-basis: 82px;
+  }
+}

@@ -1,0 +1,154 @@
+/* MENU PAGE STYLES */
+
+.page-heading {
+  max-width: 980px;
+  margin: auto;
+  padding: 45px 25px 20px;
+}
+.page-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  margin: 10px 0;
+}
+.intro {
+  color: var(--text-light);
+}
+.tabs {
+  max-width: 850px;
+  margin: 10px auto 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--brown);
+}
+.tab {
+  border: 0;
+  background: transparent;
+  color: white;
+  padding: 11px;
+  font-size: 12px;
+}
+.tab.active {
+  background: var(--gold);
+}
+.tab:hover:not(.active) {
+  background: rgba(209, 161, 94, 0.18);
+}
+.products-table-wrap {
+  max-width: 980px;
+  margin: auto;
+  padding: 0 25px 60px;
+  overflow-x: auto;
+}
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+}
+.products-table th {
+  background: var(--dark);
+  color: white;
+  text-align: left;
+  padding: 13px;
+}
+.products-table td {
+  padding: 14px;
+  border: 1px solid var(--line);
+}
+.products-table tbody tr:nth-child(even) {
+  background: #f3ede3;
+}
+.products-table tbody tr:hover {
+  background: #e9dcc8;
+}
+.products-table tfoot td {
+  background: #efe4d4;
+  font-size: 11px;
+}
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.product-image {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.view-btn {
+  border: 1px solid var(--dark);
+  background: transparent;
+  padding: 7px 10px;
+  font-size: 10px;
+}
+.view-btn:hover {
+  background: var(--dark);
+  color: white;
+}
+.detail-wrap {
+  max-width: 980px;
+  margin: auto;
+  padding: 25px;
+}
+.back-btn {
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 11px;
+}
+.detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 15px;
+}
+.detail-art {
+  min-height: 360px;
+  background: #e9dcc8;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.detail-art img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+.detail-copy h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  margin: 10px 0;
+}
+.detail-copy p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.detail-price {
+  display: block;
+  font-size: 22px;
+  margin: 20px 0;
+}
+@media (max-width: 760px) {
+.products-table thead {
+    display: none;
+  }
+.products-table,
+.products-table tbody,
+.products-table tr,
+.products-table td {
+    display: block;
+    width: 100%;
+  }
+.products-table tbody tr {
+    padding: 10px 0;
+    border-bottom: 2px solid var(--line);
+  }
+.products-table td {
+    border: 0;
+    padding: 7px 10px;
+  }
+.detail-card {
+    grid-template-columns: 1fr;
+  }
+}
